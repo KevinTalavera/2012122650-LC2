@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2012122650_ENT
 {
-    class Distrito
+    public class Distrito
     {
     }
 }
