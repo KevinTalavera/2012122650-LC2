@@ -1,4 +1,4 @@
-﻿using _2012122650_ENT;
+﻿using _2012122650_ENT.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
