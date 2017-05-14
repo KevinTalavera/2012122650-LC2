@@ -8,5 +8,9 @@ namespace _2012122650_ENT.Entities
 {
     public class Plan
     {
+        public int codPlan { get; set; }
+        public double monto { get; set; }
+        public TipoPlan TipoPlan { get; set; }
+        public Evaluacion Evaluacion { get; set; }
     }
 }
