@@ -9,6 +9,8 @@ namespace _2012122650_ENT.IRepositories
 {
     public interface IAdministradorEquipoRepository : IRepository<AdministradorEquipo>
     {
-
+       
     }
+
+
 }
