@@ -10,7 +10,7 @@ namespace _2012122650_ENT.EntitiesDTO
     public class VentaDTO
     {
         public int VentaId { get; set; }
-        public int Precio { get; set; }
+        public double Precio { get; set; }
 
         public TipoPago TipoPago { get; set; }
     }

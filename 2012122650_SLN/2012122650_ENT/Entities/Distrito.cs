@@ -19,7 +19,7 @@ namespace _2012122650_ENT.Entities
         public Distrito()
         {
             Ubigeos = new Collection<Ubigeo>();
-            Provincia = new Provincia();
+            
         }
     }
 }

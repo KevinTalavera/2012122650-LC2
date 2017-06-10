@@ -10,7 +10,7 @@ namespace _2012122650_ENT.Entities
     public class Venta
     {
         public int VentaId { get; set; }
-        public int Precio { get; set; }
+        public double Precio { get; set; }
 
         public TipoPago TipoPago { get; set; }
         public ICollection<Contrato> Contratos { get; set; }
@@ -20,7 +20,6 @@ namespace _2012122650_ENT.Entities
         public Venta()
         {
             Contratos = new Collection<Contrato>();
-            Evaluacion = new Evaluacion();
         }
     }
 }

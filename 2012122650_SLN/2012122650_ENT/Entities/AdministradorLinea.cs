@@ -16,7 +16,7 @@ namespace _2012122650_ENT.Entities
 
         public AdministradorLinea()
         {
-            LineasTelefonica = new LineaTelefonica();
+            
         }
     }
 }

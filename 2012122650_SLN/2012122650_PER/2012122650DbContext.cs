@@ -1,4 +1,5 @@
 ﻿using _2012122650_ENT.Entities;
+using _2012122650_PER.EntityTypeConfigurations;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,27 +11,48 @@ namespace _2012122650_PER
 {
     public class _2012122650DbContext : DbContext
     {
-       public DbSet<AdministradorEquipo> AdministradorEquipo { get; set; }
-       public DbSet<AdministradorLinea> AdministradorLinea { get; set; }
-       public DbSet<CentroAtencion> CentroAtencion { get; set; }
-       public DbSet<Cliente> Cliente { get; set; }
-       public DbSet<Contrato> Contrato { get; set; }
-       public DbSet<Departamento> Departamento { get; set; }
-       public DbSet<Direccion> Direccion { get; set; }
-       public DbSet<Distrito> Distrito { get; set; }
-       public DbSet<EquipoCelular> EquipoCelular { get; set; }
-       public DbSet<EstadoEvaluacion> EstadoEvaluacion { get; set; }
-       public DbSet<Evaluacion> Evaluacion { get; set; }
-       public DbSet<LineaTelefonica> LineaTelefonica { get; set; }
-       public DbSet<Plan> Plan { get; set; }
-       public DbSet<Provincia> Provincia { get; set; }
-       public DbSet<TipoEvaluacion> TipoEvaluacion { get; set; }
-       public DbSet<TipoLinea> TipoLinea { get; set; }
-       public DbSet<TipoPago> TipoPago { get; set; }
-       public DbSet<TipoPlan> TipoPlan { get; set; }
-       public DbSet<TipoTrabajador> TipoTrabajador { get; set; }
-       public DbSet<Trabajador> Trabajador { get; set; }
-       public DbSet<Ubigeo> Ubigeo { get; set; }
-       public DbSet<Venta> Venta { get; set; }
+        public DbSet<AdministradorEquipo> AdministradoresEquipo { get; set; }
+        public DbSet<EquipoCelular> EquiposCelular { get; set; }
+        public DbSet<LineaTelefonica> LineasTelefonica { get; set; }
+        public DbSet<AdministradorLinea> AdministradoresLinea { get; set; }
+        public DbSet<Distrito> Distritos { get; set; }
+        public DbSet<Provincia> Provincias { get; set; }
+        public DbSet<Departamento> Departamentos { get; set; }
+        public DbSet<Ubigeo> Ubigeos { get; set; }
+        public DbSet<Direccion> Direcciones { get; set; }
+        public DbSet<CentroAtencion> CentrosAtencion { get; set; }
+        public DbSet<Contrato> Contratos { get; set; }
+        public DbSet<Venta> Ventas { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Evaluacion> Evaluaciones { get; set; }
+        public DbSet<Plan> Planes { get; set; }
+        public DbSet<Trabajador> Trabajadores { get; set; }
+
+        public _2012122650DbContext() : base("DBContext")
+		{
+
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            
+            modelBuilder.Configurations.Add(new EquipoCelularConfiguration());
+            modelBuilder.Configurations.Add(new LineaTelefonicaConfiguration());
+            modelBuilder.Configurations.Add(new DistritoConfiguration());
+            modelBuilder.Configurations.Add(new ProvinciaConfiguration());
+            modelBuilder.Configurations.Add(new DepartamentoConfiguration());
+            modelBuilder.Configurations.Add(new UbigeoConfiguration());
+            modelBuilder.Configurations.Add(new CentroAtencionConfiguration());
+            modelBuilder.Configurations.Add(new ContratoConfiguration());
+            modelBuilder.Configurations.Add(new VentaConfiguration());
+            modelBuilder.Configurations.Add(new ClienteConfiguration());
+            modelBuilder.Configurations.Add(new EvaluacionConfiguration());
+            modelBuilder.Configurations.Add(new PlanConfiguration());
+            modelBuilder.Configurations.Add(new TrabajadorConfiguration());
+
+
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

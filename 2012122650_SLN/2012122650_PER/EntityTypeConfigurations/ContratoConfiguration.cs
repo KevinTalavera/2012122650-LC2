@@ -1,6 +1,7 @@
 ﻿using _2012122650_ENT.Entities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,10 @@ namespace _2012122650_PER.EntityTypeConfigurations
     {
         public ContratoConfiguration()
         {
-            ToTable("Contrato");
-            HasKey(a => a.codContrato);
+            
+            HasRequired(v => v.Venta)
+                 .WithMany(c => c.Contratos)
+                 .HasForeignKey(c => c.VentaId);
 
         }
     }

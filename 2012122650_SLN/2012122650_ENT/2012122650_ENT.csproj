@@ -46,7 +46,6 @@
     <Compile Include="EntitiesDTO\ClienteDTO.cs" />
     <Compile Include="EntitiesDTO\ContratoDTO.cs" />
     <Compile Include="EntitiesDTO\DepartamentoDTO.cs" />
-    <Compile Include="EntitiesDTO\DireccionDTO.cs" />
     <Compile Include="EntitiesDTO\DistritoDTO.cs" />
     <Compile Include="EntitiesDTO\EquipoCelularDTO.cs" />
     <Compile Include="EntitiesDTO\EvaluacionDTO.cs" />

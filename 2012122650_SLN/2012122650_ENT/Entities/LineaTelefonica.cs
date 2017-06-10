@@ -20,7 +20,6 @@ namespace _2012122650_ENT.Entities
         {
             AdministradorLineas = new Collection<AdministradorLinea>();
             Evaluaciones = new Collection<Evaluacion>();
-            TipoLinea = new TipoLinea();
         }
     }
 }

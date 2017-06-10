@@ -20,6 +20,6 @@ namespace _2012122650_ENT.Entities
         public Direccion()
         {
             Ubigeo = new Collection<Ubigeo>();
-            CentroAtencion = new CentroAtencion();        }
+        }
     }
 }

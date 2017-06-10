@@ -18,10 +18,10 @@ namespace _2012122650_ENT.Entities
         public Ubigeo Ubigeo { get; set; }
 
         public ICollection<Evaluacion> Evaluaciones { get; set; }
+
         public CentroAtencion()
         {
             Evaluaciones = new Collection<Evaluacion>();
-            Ubigeo = new Ubigeo();
         }
     }
 }
