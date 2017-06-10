@@ -9,13 +9,14 @@ namespace _2012122650_ENT.Entities
 {
     public class AdministradorLinea
     {
-        public int codAdmiLinea { get; set; }
-        public int baseDatos { get; set; }
-        public ICollection<LineaTelefonica> LineaTelefonica { get; set; }
+        public int AdministradorLineaId { get; set; }
+        public string NombreLinea { get; set; }
+
+        public LineaTelefonica LineasTelefonica { get; set; }
 
         public AdministradorLinea()
         {
-            LineaTelefonica = new Collection<LineaTelefonica>();
+            LineasTelefonica = new LineaTelefonica();
         }
     }
 }

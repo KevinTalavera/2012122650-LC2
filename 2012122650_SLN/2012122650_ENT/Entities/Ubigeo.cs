@@ -9,18 +9,17 @@ namespace _2012122650_ENT.Entities
 {
     public class Ubigeo
     {
-        public int codUbigeo { get; set; }
-        public Direccion Direccion { get; set; }
+        public int UbigeoId { get; set; }
 
-        public ICollection<Departamento> Departamento { get; set; }
-        public ICollection<Provincia> Provincia { get; set; }
-        public ICollection<Distrito> Distrito { get; set; }
+        public int DistritoId { get; set; }
+        public Distrito Distrito { get; set; }
+        public ICollection<CentroAtencion> CentroAtencion { get; set; }
 
         public Ubigeo()
         {
-            Departamento = new Collection<Departamento>();
-            Provincia = new Collection<Provincia>();
-            Distrito = new Collection<Distrito>();
+            Distrito = new Distrito();
+            CentroAtencion = new Collection<CentroAtencion>();
         }
-    }
+    
+}
 }

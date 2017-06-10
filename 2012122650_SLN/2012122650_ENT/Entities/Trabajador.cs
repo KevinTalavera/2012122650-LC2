@@ -9,14 +9,17 @@ namespace _2012122650_ENT.Entities
 {
     public class Trabajador
     {
-        public int codTrabajador { get; set; }
-        public string nombre { get; set; }
+        public int TrabajadorId { get; set; }
+        public string NombreTrabajador { get; set; }
+
         public TipoTrabajador TipoTrabajador { get; set; }
-        public ICollection<Evaluacion> Evaluacion { get; set; }
+
+        public List<Evaluacion> Evaluaciones { get; set; }
 
         public Trabajador()
         {
-            Evaluacion = new Collection<Evaluacion>();
+            TipoTrabajador = new TipoTrabajador();
+            Evaluaciones = new List<Evaluacion>();
         }
     }
 }

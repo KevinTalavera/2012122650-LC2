@@ -9,16 +9,18 @@ namespace _2012122650_ENT.Entities
 {
     public class LineaTelefonica
     {
-        public int codLineaTele { get; set; }
-        public int numLinea { get; set; }
-        public AdministradorLinea AdministradorLinea { get; set; }
-        public Evaluacion Evaluacion { get; set; }
-        public Venta Venta { get; set; }
-        public ICollection<TipoLinea> TipoLinea { get; set; }
-        
+        public int LineaTelefonicaId { get; set; }
+        public int NumeroLinea { get; set; }
+
+        public TipoLinea TipoLinea { get; set; }
+        public ICollection<Evaluacion> Evaluaciones { get; set; }
+        public ICollection<AdministradorLinea> AdministradorLineas { get; set; }
+
         public LineaTelefonica()
         {
-            TipoLinea = new Collection<TipoLinea>();
+            AdministradorLineas = new Collection<AdministradorLinea>();
+            Evaluaciones = new Collection<Evaluacion>();
+            TipoLinea = new TipoLinea();
         }
     }
 }

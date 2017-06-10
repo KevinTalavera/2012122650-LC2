@@ -9,15 +9,17 @@ namespace _2012122650_ENT.Entities
 {
     public class Provincia
     {
-        public int codProvincia { get; set; }
+        public int ProvinciaId { get; set; }
         public string nomProvincia { get; set; }
+
+
+        public ICollection<Distrito> Distritos { get; set; }
+        public int DepartamentoId { get; set; }
         public Departamento Departamento { get; set; }
-        public Ubigeo Ubigeo { get; set; }
-        public ICollection<Distrito> Distrito { get; set; }
 
         public Provincia()
         {
-            Distrito = new Collection<Distrito>();
+            Distritos = new Collection<Distrito>();
         }
     }
 }

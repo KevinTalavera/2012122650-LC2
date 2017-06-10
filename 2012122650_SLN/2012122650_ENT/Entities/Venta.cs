@@ -9,17 +9,18 @@ namespace _2012122650_ENT.Entities
 {
     public class Venta
     {
-        public int codVenta { get; set; }
-        public Evaluacion Evaluacion { get; set; }
-        public Contrato Contrato { get; set; }
-        public CentroAtencion CentroAtencion { get; set; }
-        public Cliente Cliente { get; set; }
+        public int VentaId { get; set; }
+        public int Precio { get; set; }
+
         public TipoPago TipoPago { get; set; }
-        public ICollection<LineaTelefonica> LineaTelefonica { get; set; }
+        public ICollection<Contrato> Contratos { get; set; }
+        public int EvaluacionId { get; set; }
+        public Evaluacion Evaluacion { get; set; }
 
         public Venta()
         {
-            LineaTelefonica = new Collection<LineaTelefonica>();
+            Contratos = new Collection<Contrato>();
+            Evaluacion = new Evaluacion();
         }
     }
 }

@@ -7,15 +7,11 @@ using System.Threading.Tasks;
 
 namespace _2012122650_ENT.Entities
 {
-    public class TipoPlan
+    public enum TipoPlan : byte
     {
-        public int codTipoPlan { get; set; }
-        public string nomTipoPlan { get; set; }
-        public ICollection<Plan> Plan { get; set; }
-
-        public TipoPlan()
-        {
-            Plan = new Collection<Plan>();
-        }
+        Plan30=1,
+        Plan40=2,
+        Plan50=3,
+        Plan100=4,
     }
 }

@@ -7,15 +7,9 @@ using System.Threading.Tasks;
 
 namespace _2012122650_ENT.Entities
 {
-    public class TipoPago
+    public enum TipoPago : byte
     {
-        public int codTipoPago { get; set; }
-        public string modoPago { get; set; }
-        public ICollection<Venta> Venta { get; set; }
-
-        public TipoPago()
-        {
-            Venta = new Collection<Venta>();
-        }
+        Credito=1,
+        Efectivo=2,
     }
 }

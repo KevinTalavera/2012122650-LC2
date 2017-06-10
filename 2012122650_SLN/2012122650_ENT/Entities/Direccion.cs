@@ -9,14 +9,17 @@ namespace _2012122650_ENT.Entities
 {
     public class Direccion
     {
-        public int codDireccion { get; set; }
-        public string nombre { get; set; }
-        public CentroAtencion CentroAtencion { get; set; }
+        public int DireccionId { get; set; }
+        public string nombredireccion { get; set; }
+
         public ICollection<Ubigeo> Ubigeo { get; set; }
+
+        //public int CentroAtencionId { get; set; }
+        public CentroAtencion CentroAtencion { get; set; }
 
         public Direccion()
         {
             Ubigeo = new Collection<Ubigeo>();
-        }
+            CentroAtencion = new CentroAtencion();        }
     }
 }

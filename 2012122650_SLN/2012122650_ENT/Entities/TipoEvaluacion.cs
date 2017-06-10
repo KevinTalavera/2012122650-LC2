@@ -7,16 +7,9 @@ using System.Threading.Tasks;
 
 namespace _2012122650_ENT.Entities
 {
-    public class TipoEvaluacion
+    public enum TipoEvaluacion : byte
     {
-        public int codTipoEva { get; set; }
-        public string nomTipoEva { get; set; }
-        public ICollection<Evaluacion> Evaluacion { get; set; }
-
-        public TipoEvaluacion()
-        {
-            Evaluacion = new Collection<Evaluacion>();
-        }
-
+        Procede=1,
+        NoProcede=2,
     }
 }

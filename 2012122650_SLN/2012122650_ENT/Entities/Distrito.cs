@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,17 @@ namespace _2012122650_ENT.Entities
 {
     public class Distrito
     {
-        public int codDistrito { get; set; }
+        public int DistritoId { get; set; }
         public string nomDistrito { get; set; }
-        public Ubigeo Ubigeo { get; set; }
+
+        public int ProvinciaId { get; set; }
         public Provincia Provincia { get; set; }
+        public ICollection<Ubigeo> Ubigeos { get; set; }
+
+        public Distrito()
+        {
+            Ubigeos = new Collection<Ubigeo>();
+            Provincia = new Provincia();
+        }
     }
 }

@@ -9,14 +9,14 @@ namespace _2012122650_ENT.Entities
 {
     public class Departamento
     {
-        public int codDepartamento { get; set; }
-        public string nomDepartamento { get; set; }
-        public Ubigeo Ubigeo { get; set; }
-        public ICollection<Provincia> Provincia { get; set; }
+        public int DepartamentoId { get; set; }
+        public string departamento { get; set; }
+
+        public ICollection<Provincia> Provincias { get; set; }
 
         public Departamento()
         {
-            Provincia = new Collection<Provincia>();
+            Provincias = new Collection<Provincia>();
         }
     }
 }

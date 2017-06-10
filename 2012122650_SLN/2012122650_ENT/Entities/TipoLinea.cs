@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace _2012122650_ENT.Entities
 {
-    public class TipoLinea
+    public enum TipoLinea : byte
     {
-        public int codTipoLinea { get; set; }
-        public string nomTipoLinea { get; set; }
-        public LineaTelefonica LineaTelefonica { get; set; }
+        Prepago=1,
+        Postpago=2,
     }
 }

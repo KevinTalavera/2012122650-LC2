@@ -9,16 +9,19 @@ namespace _2012122650_ENT.Entities
 {
     public class CentroAtencion
     {
-        public int codCentroAten { get; set; }
-        public string sucursal { get; set; }
-        public Direccion Direccion { get; set; }
-        public ICollection<Evaluacion> Evaluacion { get; set; }
-        public ICollection<Venta> Venta { get; set; }
+        public int CentroAtencionId { get; set; }
+        public string NombreCentroAtencion { get; set; }
+        public string Direccion { get; set; }
+        public int Telefono { get; set; }
 
+        public int UbigeoId { get; set; }
+        public Ubigeo Ubigeo { get; set; }
+
+        public ICollection<Evaluacion> Evaluaciones { get; set; }
         public CentroAtencion()
         {
-            Evaluacion = new Collection<Evaluacion>();
-            Venta = new Collection<Venta>();
+            Evaluaciones = new Collection<Evaluacion>();
+            Ubigeo = new Ubigeo();
         }
     }
 }
