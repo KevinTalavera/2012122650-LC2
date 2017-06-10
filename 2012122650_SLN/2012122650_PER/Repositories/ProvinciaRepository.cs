@@ -10,6 +10,9 @@ namespace _2012122650_PER.Repositories
 {
     public class ProvinciaRepository : Repository<Provincia>, IProvinciaRepository
     {
+        public ProvinciaRepository(_2012122650DbContext context) : base(context)
+        {
 
+        }
     }
 }

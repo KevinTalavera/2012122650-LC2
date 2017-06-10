@@ -10,6 +10,9 @@ namespace _2012122650_PER.Repositories
 {
     public class PlanRepository : Repository<Plan>, IPlanRepository
     {
+        public PlanRepository(_2012122650DbContext context) : base(context)
+        {
 
+        }
     }
 }

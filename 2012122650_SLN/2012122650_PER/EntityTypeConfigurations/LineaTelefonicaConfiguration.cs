@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace _2012122650_PER.EntityTypeConfigurations
 {
-    public class DireccionConfiguration : EntityTypeConfiguration<Direccion>
+    public class LineaTelefonicaConfiguration : EntityTypeConfiguration<LineaTelefonica>
     {
-        public DireccionConfiguration()
+        public LineaTelefonicaConfiguration()
         {
-            ToTable("AdministradorLines");
-            HasKey(a => a.codDireccion);
+            ToTable("LineaTelefono");
+            HasKey(a => a.codLineaTele);
 
         }
     }

@@ -10,6 +10,9 @@ namespace _2012122650_PER.Repositories
 {
     public class EvaluacionRepository : Repository<Evaluacion>, IEvaluacionRepository
     {
+        public EvaluacionRepository(_2012122650DbContext context) : base(context)
+        {
 
+        }
     }
 }
