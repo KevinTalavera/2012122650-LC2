@@ -28,10 +28,7 @@ namespace _2012122650_PER
         public DbSet<Plan> Planes { get; set; }
         public DbSet<Trabajador> Trabajadores { get; set; }
 
-        public _2012122650DbContext() : base("DBContext")
-		{
-
-        }
+        
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -41,7 +38,7 @@ namespace _2012122650_PER
             modelBuilder.Configurations.Add(new DistritoConfiguration());
             modelBuilder.Configurations.Add(new ProvinciaConfiguration());
             modelBuilder.Configurations.Add(new DepartamentoConfiguration());
-            modelBuilder.Configurations.Add(new UbigeoConfiguration());
+            //modelBuilder.Configurations.Add(new UbigeoConfiguration());
             modelBuilder.Configurations.Add(new CentroAtencionConfiguration());
             modelBuilder.Configurations.Add(new ContratoConfiguration());
             modelBuilder.Configurations.Add(new VentaConfiguration());

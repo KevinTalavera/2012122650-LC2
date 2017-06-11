@@ -61,9 +61,9 @@
     <Compile Include="EntityTypeConfigurations\TrabajadorConfiguration.cs" />
     <Compile Include="EntityTypeConfigurations\UbigeoConfiguration.cs" />
     <Compile Include="EntityTypeConfigurations\VentaConfiguration.cs" />
-    <Compile Include="Migrations\201706102152409_initilmode.cs" />
-    <Compile Include="Migrations\201706102152409_initilmode.Designer.cs">
-      <DependentUpon>201706102152409_initilmode.cs</DependentUpon>
+    <Compile Include="Migrations\201706110207070_initialmode.cs" />
+    <Compile Include="Migrations\201706110207070_initialmode.Designer.cs">
+      <DependentUpon>201706110207070_initialmode.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,8 +94,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706102152409_initilmode.resx">
-      <DependentUpon>201706102152409_initilmode.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706110207070_initialmode.resx">
+      <DependentUpon>201706110207070_initialmode.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

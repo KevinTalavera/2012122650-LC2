@@ -1,0 +1,42 @@
+﻿@model _2012122650_ENT.Entities.Provincia
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Provincia</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Departamento.departamento)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Departamento.departamento)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.nomProvincia)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.nomProvincia)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ProvinciaId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
